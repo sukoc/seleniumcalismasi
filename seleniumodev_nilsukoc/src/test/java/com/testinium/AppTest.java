@@ -35,7 +35,7 @@ public class AppTest {
         wait = new WebDriverWait(driver, Duration.ofSeconds(30), Duration.ofMillis(05));
         driver.get("https://www.trendyol.com/");
         TimeUnit.SECONDS.sleep(2);
-        findElement(By.cssSelector("img[alt='Male'")).click();
+        findElement(By.cssSelector("img[alt='Female'")).click();
 
     }
 
@@ -128,46 +128,6 @@ public class AppTest {
 
     }
 
-    /*
-    @Test
-    public void switchToTest() throws InterruptedException{
-        driver.navigate().to("https://demoqa.com/browser-windows");
-        String currentWindow = driver.getWindowHandle();
-        driver.findElement(By.id("tabButton")).click();
-
-        // wait.until(ExpectedConditions.numberOfWindowsToBe(2));
-
-        Set<String> windowHandles = driver.getWindowHandles();
-
-        for (String window:
-                windowHandles) {
-            if(!currentWindow.equals(window)) {
-                driver.switchTo().window(window);
-            }
-
-        }
-        TimeUnit.SECONDS.sleep(5);
-        System.out.println("New window text " + driver.findElement(By.id("sampleHeading")).getText());
-        driver.close();
-        driver.switchTo().window(currentWindow);
-
-        driver.findElement(By.id("messageWindowButton")).click();
-        TimeUnit.SECONDS.sleep(3);
-    }
-
-
-     */
-
-/*
-    @Test
-    public void selectTest() throws InterruptedException{
-        driver.navigate().to("https://www.n11.com/uye-ol");
-        Select select = new Select(driver.findElement(By.id("birthDay")));
-        select.selectByVisibleText("6");
-        TimeUnit.SECONDS.sleep(3);
-    }
-
- */
 
 
 
